@@ -35,9 +35,7 @@ class GalaxyExplorerViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.backgroundColor = .systemBackground
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = 200
     }
 }
 
@@ -59,12 +57,6 @@ extension GalaxyExplorerViewController: UITableViewDataSource {
 }
 
 extension GalaxyExplorerViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        UIView.animate(withDuration: 0.4) {
-            cell.transform = CGAffineTransform.identity
-        }
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let url = viewModel?.dataSource[indexPath.row].hdurl,

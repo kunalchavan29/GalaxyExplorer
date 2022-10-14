@@ -62,7 +62,7 @@ class CustomImageView: UIImageView {
                         
                         let aspectRatio = compressedImage.size.height/compressedImage.size.width
                         let imageHeight = (self.frame.width) * aspectRatio
-                        rowHeights[url.absoluteString] = imageHeight
+                        rowHeights[url.absoluteString] = imageHeight+20
                         completion(compressedImage)
                     }
                     
