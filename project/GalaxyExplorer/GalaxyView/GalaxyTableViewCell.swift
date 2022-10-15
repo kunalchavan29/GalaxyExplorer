@@ -23,10 +23,15 @@ class GalaxyTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        resetUI()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        resetUI()
+    }
+    
+    func resetUI() {
         galaxyImage.image = nil
         titleLabel.text = ""
     }
